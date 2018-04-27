@@ -4,7 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="coach"
-          class="com.codehub.spring.impl.SoccerCoach">
+          class="com.codehub.spring.impl.SoccerCoach"
+          scope="singleton">
     </bean>
+
+    <bean id="prototypeCoach"
+          class="com.codehub.spring.impl.BasketballCoach"
+          scope="prototype">
+    </bean>
+
 
 </beans>
