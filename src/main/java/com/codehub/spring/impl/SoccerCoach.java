@@ -10,4 +10,12 @@ public class SoccerCoach implements Coach {
     public String performDailyWorkout() {
         return PERFORM_30_MIN_SOCCER_WORKOUT;
     }
+
+    public void initMethod() {
+        System.out.println("Inside Init Method");
+    }
+
+    public void destroyMethod() {
+        System.out.println("Inside Destroy Method");
+    }
 }
