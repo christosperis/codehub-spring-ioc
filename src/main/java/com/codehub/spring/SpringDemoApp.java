@@ -1,16 +1,17 @@
 package com.codehub.spring;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.codehub.spring.config.SportsConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringDemoApp {
 
     public static void main(String[] args) {
 
         //load application context
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SportsConfig.class);
 
         //retrieve bean from spring container - default name used
-        Coach coach = ctx.getBean("soccerCoach", Coach.class);
+        Coach coach = ctx.getBean("basketballCoach", Coach.class);
 
         //call methods on the bean
         System.out.println(coach.performDailyWorkout());

@@ -1,7 +1,9 @@
 package com.codehub.spring.impl;
 
 import com.codehub.spring.Coach;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BasketballCoach implements Coach {
 
 
