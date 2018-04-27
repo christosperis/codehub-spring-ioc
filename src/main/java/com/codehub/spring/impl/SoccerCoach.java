@@ -49,4 +49,12 @@ public class SoccerCoach implements Coach, BeanNameAware, BeanFactoryAware, Appl
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("### Demo Bean display name is" + applicationContext.getDisplayName());
     }
+
+    public void beforeInit() {
+        System.out.println("### Before Init called by BeanPostProcessor");
+    }
+
+    public void afterInit() {
+        System.out.println("### After Init called by BeanPostProcessor");
+    }
 }

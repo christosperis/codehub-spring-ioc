@@ -9,4 +9,7 @@
           destroy-method="destroyMethod">
     </bean>
 
+    <bean id="beanPostProcessor" class="com.codehub.spring.packageProcessor.CoachBeanPostProcessor">
+
+    </bean>
 </beans>
