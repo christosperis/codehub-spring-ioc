@@ -1,11 +1,12 @@
 package com.codehub.spring.packageProcessor;
 
-import com.codehub.spring.Coach;
-import com.codehub.spring.SpringDemoApp;
-import com.codehub.spring.impl.SoccerCoach;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.stereotype.Component;
 
+import com.codehub.spring.impl.SoccerCoach;
+
+@Component
 public class CoachBeanPostProcessor implements BeanPostProcessor {
 
     @Override
