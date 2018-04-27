@@ -11,7 +11,7 @@ public class SpringDemoApp {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SportsConfig.class);
 
         //retrieve bean from spring container - default name used
-        Coach coach = ctx.getBean("basketballCoach", Coach.class);
+        Coach coach = ctx.getBean("soccerCoach", Coach.class);
 
         //call methods on the bean
         System.out.println(coach.performDailyWorkout());
