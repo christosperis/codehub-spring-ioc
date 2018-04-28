@@ -7,6 +7,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
 //@Component("soccerCoach")
 public class SoccerCoach implements Coach, BeanNameAware, BeanFactoryAware, ApplicationContextAware,
@@ -19,12 +22,14 @@ public class SoccerCoach implements Coach, BeanNameAware, BeanFactoryAware, Appl
         return PERFORM_30_MIN_SOCCER_WORKOUT;
     }
 
+    @PostConstruct
     public void initMethod() {
-        System.out.println("Inside Init Method");
+        System.out.println("Inside Init Method annotated with PostConstruct");
     }
 
+    @PreDestroy
     public void destroyMethod() {
-        System.out.println("Inside Destroy Method");
+        System.out.println("Inside Destroy Method annotated with PreDestroy");
     }
 
     @Override
